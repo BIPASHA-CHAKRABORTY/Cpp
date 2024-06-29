@@ -11,26 +11,29 @@ private:
     double balance;
 
 public:
-    // Constructor to assign initial values
-    BankAccount(string name, string accNumber, string accType, double initialBalance) 
-        : depositorName(name), accountNumber(accNumber), accountType(accType), balance(initialBalance) {}
-
-    // Function to deposit an amount
-    void deposit(double amount) {
+   BankAccount(string name, string accNumber, string accType, double initialBalance)
+   {
+        depositorName = name;
+        accountNumber = accNumber;
+        accountType = accType;
+        balance = initialBalance;
+    }
+   
+    void deposit(double amount) 
+     {
         if (amount > 0) {
             balance += amount;
-            cout << "Deposited $" << amount << ". New balance: $" << balance << endl;
+            cout << "Deposited " << amount << ". New balance:" << balance;
         } else {
             cout << "Deposit amount must be positive." << endl;
         }
-    }
+     }
 
-    // Function to withdraw an amount after checking the balance
     void withdraw(double amount) {
         if (amount > 0) {
             if (balance >= amount) {
                 balance -= amount;
-                cout << "Withdrew $" << amount << ". New balance: $" << balance << endl;
+                cout << "Withdrew " << amount << " New balance: " ;
             } else {
                 cout << "Insufficient balance." << endl;
             }
@@ -39,31 +42,31 @@ public:
         }
     }
 
-    // Function to display the name and balance
-    void displayInfo() const {
+    
+    void displayInfo() const 
+   {
         cout << "Depositor Name: " << depositorName << endl;
         cout << "Balance: $" << balance << endl;
     }
 };
 
-// Main program to test the BankAccount class
+
 int main() {
-    // Create a new bank account
+    
     BankAccount account("John Doe", "123456789", "Savings", 1000.0);
 
-    // Display account info
+    
     account.displayInfo();
 
-    // Deposit money
+    
     account.deposit(500.0);
 
-    // Withdraw money
     account.withdraw(300.0);
 
-    // Attempt to withdraw more money than available
+   
     account.withdraw(1500.0);
 
-    // Display account info again
+    
     account.displayInfo();
 
     return 0;
