@@ -3,25 +3,25 @@ using namespace std;
 
 int main() 
  {
-    float subject1, subject2, subject3, subject4;
-    float totalGradePoints, cgpa;
+    float DLD, DSA, EVS, CPP;
+    float total, cgpa;
 
     // Input grades for 4 subjects
-    cout << "Enter the grade points for 4 subjects: " << endl;
-    cout << "Subject 1: ";
-    cin >> subject1;
-    cout << "Subject 2: ";
-    cin >> subject2;
-    cout << "Subject 3: ";
-    cin >> subject3;
-    cout << "Subject 4: ";
-    cin >> subject4;
+    cout << "Enter the marks for 4 subjects: ";
+    cout << "CPP: ";
+    cin >> CPP;
+    cout << "DLD: ";
+    cin >> DLD;
+    cout << "EVS: ";
+    cin >> EVS;
+    cout << "DSA ";
+    cin >> DSA;
 
   
-    totalGradePoints = subject1 + subject2 + subject3 + subject4;
+    totalGradePoints = DSA+DLD+EVS+CPP;
 
    
-    cgpa = totalGradePoints / 4.0;
+    cgpa = total/ 4.0;
 
     
     cout << "Your CGPA is: " << cgpa;
